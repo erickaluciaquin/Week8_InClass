@@ -82,7 +82,7 @@ military <- read_xlsx("data/gov_spending_per_capita.xlsx",  # reads file path of
                       sheet = "Share of Govt. spending",    # selects tab on excel sheet
                       skip  = 7,                            # skipping a number of rows
                       n_max = 191,                          # reads a maximum number of rows
-                      na = c("xxx", ".."))                  # reads as na's 
+                      na = c("xxx", ". ."))                  # reads as na's 
 ```
 
 *I would highly recommend you open the dataset in Excel, so you can see the data layout!*
@@ -179,7 +179,11 @@ Hint: **Do not** overwrite your cleaned up dataset!
 
 ```{r}
 #| label: pivoting-military-data-longer
-
+military_new <- military_clean |>
+  pivot_longer(cols= 4:35,
+               names_to = "year",
+               values_to = "spending")
+military_new
 
 ```
 
@@ -214,6 +218,16 @@ eastern_europe <- c("Armenia",
                     "Ukraine")
 
 # Hint - look at the code chunk `filter-regions` and Question 2 for code similar to what you will want to use to filter out just these countries.  
+
+military_EEurope <- military_new |>
+  filter(Country == eastern_europe) 
+
+ggplot(data = military_EEurope, aes(x = Country, y = spending)) +
+  geom_boxplot() +
+  coord_flip() +
+  labs(title = " Eastern Eripe Military Spending",
+       y = "Spending Proportion of GDP",
+       x = "Country") 
 
 ```
 
