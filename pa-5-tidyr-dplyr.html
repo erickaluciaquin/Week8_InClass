@@ -3161,11 +3161,11 @@ listening to instructions from the Coder)!  -->
 </ul>
 <p><strong>1. Comment the code below to read the military expenditures data into your workspace, identifying why each setting was chosen.</strong></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>military <span class="ot">&lt;-</span> <span class="fu">read_xlsx</span>(<span class="st">&quot;data/gov_spending_per_capita.xlsx&quot;</span>,  <span class="co">#comment</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>                      <span class="at">sheet =</span> <span class="st">&quot;Share of Govt. spending&quot;</span>,    <span class="co">#comment</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>                      <span class="at">skip  =</span> <span class="dv">7</span>,                            <span class="co">#comment</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>                      <span class="at">n_max =</span> <span class="dv">191</span>,                          <span class="co">#comment</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>                      <span class="at">na =</span> <span class="fu">c</span>(<span class="st">&quot;xxx&quot;</span>, <span class="st">&quot;..&quot;</span>))                  <span class="co">#comment</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>military <span class="ot">&lt;-</span> <span class="fu">read_xlsx</span>(<span class="st">&quot;data/gov_spending_per_capita.xlsx&quot;</span>,  <span class="co"># reads file path of data</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>                      <span class="at">sheet =</span> <span class="st">&quot;Share of Govt. spending&quot;</span>,    <span class="co"># selects tab on excel sheet</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>                      <span class="at">skip  =</span> <span class="dv">7</span>,                            <span class="co"># skipping a number of rows</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>                      <span class="at">n_max =</span> <span class="dv">191</span>,                          <span class="co"># reads a maximum number of rows</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>                      <span class="at">na =</span> <span class="fu">c</span>(<span class="st">&quot;xxx&quot;</span>, <span class="st">&quot;..&quot;</span>))                  <span class="co"># reads as na&#39;s </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <pre><code>Error: `path` does not exist: &#39;data/gov_spending_per_capita.xlsx&#39;</code></pre>
 </div>
@@ -3824,11 +3824,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb13-82"><a href="#cb13-82" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
 <span id="cb13-83"><a href="#cb13-83" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: read-in-military-data</span></span>
 <span id="cb13-84"><a href="#cb13-84" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-85"><a href="#cb13-85" aria-hidden="true" tabindex="-1"></a>military <span class="ot">&lt;-</span> <span class="fu">read_xlsx</span>(<span class="st">&quot;data/gov_spending_per_capita.xlsx&quot;</span>,  <span class="co">#comment</span></span>
-<span id="cb13-86"><a href="#cb13-86" aria-hidden="true" tabindex="-1"></a>                      <span class="at">sheet =</span> <span class="st">&quot;Share of Govt. spending&quot;</span>,    <span class="co">#comment</span></span>
-<span id="cb13-87"><a href="#cb13-87" aria-hidden="true" tabindex="-1"></a>                      <span class="at">skip  =</span> <span class="dv">7</span>,                            <span class="co">#comment</span></span>
-<span id="cb13-88"><a href="#cb13-88" aria-hidden="true" tabindex="-1"></a>                      <span class="at">n_max =</span> <span class="dv">191</span>,                          <span class="co">#comment</span></span>
-<span id="cb13-89"><a href="#cb13-89" aria-hidden="true" tabindex="-1"></a>                      <span class="at">na =</span> <span class="fu">c</span>(<span class="st">&quot;xxx&quot;</span>, <span class="st">&quot;..&quot;</span>))                  <span class="co">#comment</span></span>
+<span id="cb13-85"><a href="#cb13-85" aria-hidden="true" tabindex="-1"></a>military <span class="ot">&lt;-</span> <span class="fu">read_xlsx</span>(<span class="st">&quot;data/gov_spending_per_capita.xlsx&quot;</span>,  <span class="co"># reads file path of data</span></span>
+<span id="cb13-86"><a href="#cb13-86" aria-hidden="true" tabindex="-1"></a>                      <span class="at">sheet =</span> <span class="st">&quot;Share of Govt. spending&quot;</span>,    <span class="co"># selects tab on excel sheet</span></span>
+<span id="cb13-87"><a href="#cb13-87" aria-hidden="true" tabindex="-1"></a>                      <span class="at">skip  =</span> <span class="dv">7</span>,                            <span class="co"># skipping a number of rows</span></span>
+<span id="cb13-88"><a href="#cb13-88" aria-hidden="true" tabindex="-1"></a>                      <span class="at">n_max =</span> <span class="dv">191</span>,                          <span class="co"># reads a maximum number of rows</span></span>
+<span id="cb13-89"><a href="#cb13-89" aria-hidden="true" tabindex="-1"></a>                      <span class="at">na =</span> <span class="fu">c</span>(<span class="st">&quot;xxx&quot;</span>, <span class="st">&quot;..&quot;</span>))                  <span class="co"># reads as na&#39;s </span></span>
 <span id="cb13-90"><a href="#cb13-90" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb13-91"><a href="#cb13-91" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-92"><a href="#cb13-92" aria-hidden="true" tabindex="-1"></a>*I would highly recommend you open the dataset in Excel, so you can see the data layout!*</span>

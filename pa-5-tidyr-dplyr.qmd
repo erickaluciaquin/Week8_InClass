@@ -78,11 +78,11 @@ data.
 ```{r}
 #| label: read-in-military-data
 
-military <- read_xlsx("data/gov_spending_per_capita.xlsx",  #comment
-                      sheet = "Share of Govt. spending",    #comment
-                      skip  = 7,                            #comment
-                      n_max = 191,                          #comment
-                      na = c("xxx", ".."))                  #comment
+military <- read_xlsx("data/gov_spending_per_capita.xlsx",  # reads file path of data
+                      sheet = "Share of Govt. spending",    # selects tab on excel sheet
+                      skip  = 7,                            # skipping a number of rows
+                      n_max = 191,                          # reads a maximum number of rows
+                      na = c("xxx", ".."))                  # reads as na's 
 ```
 
 *I would highly recommend you open the dataset in Excel, so you can see the data layout!*
